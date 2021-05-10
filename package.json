@@ -1,0 +1,19 @@
+{
+  "name": "firebase",
+  "version": "0.0.1",
+  "description": "Firebase REST API library written in Typecript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martinrossil/firebase.git"
+  },
+  "author": "Martin Rossil",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/martinrossil/firebase/issues"
+  },
+  "homepage": "https://github.com/martinrossil/firebase#readme"
+}
