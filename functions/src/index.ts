@@ -1,22 +1,20 @@
 import * as functions from 'firebase-functions';
 import * as admin from 'firebase-admin';
 import * as express from 'express';
-import * as cors from 'cors';
-import IFirebaseAuth from './IFirebaseAuth';
-import FirebaseAuth from './FirebaseAuth';
+// import * as cors from 'cors';
 // import { UserRecord } from 'firebase-functions/lib/providers/auth';
 
 admin.initializeApp();
 
-const API_KEY = 'AIzaSyBadPY7a0Ec-Fp-56IYpMYauAY9mmNhLlY';
-const firebaseAuth: IFirebaseAuth = new FirebaseAuth(API_KEY);
+// const API_KEY = '';
+// const firebaseAuth: IFirebaseAuth = new FirebaseAuth(API_KEY);
 // const auth: admin.auth.Auth = admin.auth();
 const app = express();
-app.use(cors({ origin: true }));
+// app.use(cors({ origin: true }));
 app.all('/api/*', (request, response) => {
     response.setHeader('Content-Type', 'application/json');
     if (request.path === '/api/signUp') {
-        firebaseAuth.signUp(request.body.email, request.body.password)
+        /* firebaseAuth.signUp(request.body.email, request.body.password)
             .then((result: Response) => {
                 response.send(result).status(200);
             }, (rejected: unknown) => {
@@ -27,6 +25,7 @@ app.all('/api/*', (request, response) => {
             });
     } else {
         response.send({ message: 'method ' + request.path + ', does not exist.' }).status(200);
+    } */
     }
 });
 
